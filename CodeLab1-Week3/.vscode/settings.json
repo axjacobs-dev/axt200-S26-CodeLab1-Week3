@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "CodeLab1-Week2.slnx"
+    "dotnet.defaultSolution": "CodeLab1-Week3.slnx"
 }
