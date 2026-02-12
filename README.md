@@ -1,5 +1,3 @@
-# FILL IN INFO ABOUT YOUR GAME HERE. 
+Code Lab 1--Week 3 assignment: "Make a game that saves data between play sessions"
 
-DO NOT LEAVE IT LIKE THIS!!!
-
-Please? Please, give me content. I'm begging you. It's not that hard. Thanks.
+Will attempt to add a variable called "interactions" to my Museum of Decay walking sim.
