@@ -19,7 +19,7 @@ public class StrangerDestroy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("You have interacted with a stranger.");
-            //GameManager.instance.Score++;
+            ObjectPermanence.instance.Score++;
             Destroy(gameObject);
         }
     }

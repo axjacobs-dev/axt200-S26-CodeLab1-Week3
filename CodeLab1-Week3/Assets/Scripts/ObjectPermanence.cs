@@ -17,15 +17,15 @@ public class ObjectPermanence : MonoBehaviour
     {
         set
         {   
-            Debug.Log("You have interacted with:" + value +" strangers");
-            //I'm going to use playerprefs
+            Debug.Log("You have interacted with " + value +" strangers");
+            //I'm going to use PlayerPrefs
             score = value;
             PlayerPrefs.SetInt(KeyScore, score);
         }
         get
         {
             score = PlayerPrefs.GetInt(KeyScore);
-            Debug.Log("You have interacted with a total of:" + score + " strangers");
+            Debug.Log("You have interacted with a total of " + score + " strangers");
             return score;
         }
     }
