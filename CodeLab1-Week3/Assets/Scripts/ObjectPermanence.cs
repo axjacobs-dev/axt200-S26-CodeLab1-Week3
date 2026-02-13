@@ -29,13 +29,24 @@ public class ObjectPermanence : MonoBehaviour
             return score;
         }
         set  //writing
-        {   
+        {    
             
-            //I'm going to use PlayerPrefs
-            //sets score variable to value of property Score
             score = value;
             Debug.Log("You have interacted with " + value +" strangers");
             PlayerPrefs.SetInt(KeyScore, score);
+            updatedScoreText = defaultScoreText;
+            // Replace placeholders with current values 
+            updatedScoreText = updatedScoreText.Replace("<score>", Score.ToString()); 
+            //always use the property to make sure the value is properly loaded
+
+            // Update the UI text if assigned (avoid null reference)
+            if (scoreText != null)
+            {
+                scoreText.text = updatedScoreText;
+            }
+            //I'm going to use PlayerPrefs
+            //sets score variable to value of property Score
+          
             //can add juice here
         }
     }
@@ -69,16 +80,16 @@ public class ObjectPermanence : MonoBehaviour
     //so will move this to the property and create an update score function
     void Update()
     {
-        updatedScoreText = defaultScoreText;
-        // Replace placeholders with current values 
-        updatedScoreText = updatedScoreText.Replace("<score>", Score.ToString()); 
-        //always use the property to make sure the value is properly loaded
-
-        // Update the UI text if assigned (avoid null reference)
-        if (scoreText != null)
-        {
-            scoreText.text = updatedScoreText;
-        }
+        // updatedScoreText = defaultScoreText;
+        // // Replace placeholders with current values 
+        // updatedScoreText = updatedScoreText.Replace("<score>", Score.ToString()); 
+        // //always use the property to make sure the value is properly loaded
+        //
+        // // Update the UI text if assigned (avoid null reference)
+        // if (scoreText != null)
+        // {
+        //     scoreText.text = updatedScoreText;
+        // }
     }
     //function for changing scenes
     void OnTriggerEnter(Collider other)
